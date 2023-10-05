@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace API
 {
@@ -6,9 +7,8 @@ namespace API
     {
         public static async Task Main(string[] args)
         {
-            await MinecraftCall(); 
+            await MinecraftCall();
 
-            
         }
 
         public static async Task MinecraftCall()
@@ -24,7 +24,9 @@ namespace API
 
             MinecraftData me = JsonSerializer.Deserialize<MinecraftData>(json, options);
 
-            Console.WriteLine(Base64Decode(me.value) + "\n");
+            me.value = Base64Decode(me.properties[0].value);
+
+            var jsonObject = JsonSerializer.Deserialize<MinecraftData>(me.value, options);
             
             Console.WriteLine(me + "\n");
         }

@@ -11,7 +11,7 @@ namespace API
         public string id { get; set; } = string.Empty;
         public string name { get; set; } = string.Empty;
 
-        public string[] properties { get; set; } 
+        public Property[] properties { get; set; }
 
         public string value { get; set; } = string.Empty;
 
