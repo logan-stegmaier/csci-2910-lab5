@@ -29,9 +29,8 @@ namespace API
         {
             string minecraftString = "";
 
-            minecraftString += $"ID: {id}\n";
-            minecraftString += $"Username: {name}\n";
-            minecraftString += $"Value: {value}\n";
+            minecraftString += $"UUID: {id}\n";
+            minecraftString += $"Username: {name}";
 
             return minecraftString;
         }
