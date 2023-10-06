@@ -1,7 +1,7 @@
 # csci-2910-lab5
 Stegmaier, Logan
 
-LAB 5: API
+## LAB 5: API
 
 Most notable issues encountered: 
 - Base64 String Value from Mojang left me clueless on how to approach it 
